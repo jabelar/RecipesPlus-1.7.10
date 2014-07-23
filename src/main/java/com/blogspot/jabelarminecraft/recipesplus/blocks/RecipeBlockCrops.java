@@ -83,6 +83,28 @@ public class RecipeBlockCrops extends BlockBush implements IGrowable
     {
         return 1; // Cross like flowers
     }
+    
+    /**
+     * Gets the block's texture. Args: side, meta
+     */
+    @Override
+	@SideOnly(Side.CLIENT)
+    public IIcon getIcon(int parSide, int parGrowthStage)
+    {
+        if (parGrowthStage < 7)
+        {
+            if (parGrowthStage == 6)
+            {
+                parGrowthStage = 5;
+            }
+
+            return iIcon[parGrowthStage >> 1];
+        }
+        else
+        {
+            return iIcon[3];
+        }
+    }
    
     /*
      * Need to implement the IGrowable interface methods

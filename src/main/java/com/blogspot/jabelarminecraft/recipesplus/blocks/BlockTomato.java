@@ -36,8 +36,8 @@ public class BlockTomato extends RecipeBlockCrops
     public BlockTomato()
     {
     	// Basic block setup
-        this.setBlockName("tomatoes");
-        this.setBlockTextureName("recipeplus:tomatoes_stage_0");
+        setBlockName("tomatoes");
+        setBlockTextureName("recipeplus:tomatoes_stage_0");
 
     }
 
@@ -92,15 +92,17 @@ public class BlockTomato extends RecipeBlockCrops
     @SideOnly(Side.CLIENT)
     public void registerBlockIcons(IIconRegister parIIconRegister)
     {
-	      this.iIcon = new IIcon[8];
+    	// DEBUG
+    	System.out.println("Block Tomato registerBlockIcons()");
+	      iIcon = new IIcon[8];
 	      // seems that crops like to have 8 growth icons, but okay to repeat actual texture if you want
-	      this.iIcon[0] = parIIconRegister.registerIcon("recipeplus:tomatoes_stage_0");
-	      this.iIcon[1] = parIIconRegister.registerIcon("recipeplus:tomatoes_stage_0");
-	      this.iIcon[2] = parIIconRegister.registerIcon("recipeplus:tomatoes_stage_1");
-	      this.iIcon[3] = parIIconRegister.registerIcon("recipeplus:tomatoes_stage_1");
-	      this.iIcon[4] = parIIconRegister.registerIcon("recipeplus:tomatoes_stage_2");
-	      this.iIcon[5] = parIIconRegister.registerIcon("recipeplus:tomatoes_stage_2");
-	      this.iIcon[6] = parIIconRegister.registerIcon("recipeplus:tomatoes_stage_3");
-	      this.iIcon[7] = parIIconRegister.registerIcon("recipeplus:tomatoes_stage_3");
+	      iIcon[0] = parIIconRegister.registerIcon("recipeplus:tomatoes_stage_0");
+	      iIcon[1] = parIIconRegister.registerIcon("recipeplus:tomatoes_stage_0");
+	      iIcon[2] = parIIconRegister.registerIcon("recipeplus:tomatoes_stage_1");
+	      iIcon[3] = parIIconRegister.registerIcon("recipeplus:tomatoes_stage_1");
+	      iIcon[4] = parIIconRegister.registerIcon("recipeplus:tomatoes_stage_2");
+	      iIcon[5] = parIIconRegister.registerIcon("recipeplus:tomatoes_stage_2");
+	      iIcon[6] = parIIconRegister.registerIcon("recipeplus:tomatoes_stage_3");
+	      iIcon[7] = parIIconRegister.registerIcon("recipeplus:tomatoes_stage_3");
 	  }
 	}

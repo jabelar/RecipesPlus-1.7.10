@@ -22,14 +22,10 @@ import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 
 import com.blogspot.jabelarminecraft.recipesplus.blocks.BlockBlueberry;
-import com.blogspot.jabelarminecraft.recipesplus.blocks.BlockPantry;
-import com.blogspot.jabelarminecraft.recipesplus.blocks.BlockStove;
 import com.blogspot.jabelarminecraft.recipesplus.blocks.BlockTomato;
 import com.blogspot.jabelarminecraft.recipesplus.gui.RecipeCreativeTab;
 import com.blogspot.jabelarminecraft.recipesplus.items.ItemBlueberry;
 import com.blogspot.jabelarminecraft.recipesplus.items.ItemTomato;
-import com.blogspot.jabelarminecraft.recipesplus.tileentities.TileEntityPantry;
-import com.blogspot.jabelarminecraft.recipesplus.tileentities.TileEntityStove;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -51,9 +47,6 @@ public class RecipePlus
     // instantiate blocks
     public final static Block blockTomato = new BlockTomato();
 	public final static Block blockBlueberry = new BlockBlueberry();
-	public final static Block blockStove = new BlockStove(false);
-	public final static Block blockStoveLit = new BlockStove(true);
-	public final static Block blockPantry = new BlockPantry();
 
     // instantiate items
     public final static Item tomato = new ItemTomato();
@@ -69,17 +62,12 @@ public class RecipePlus
     	// register blocks
     	GameRegistry.registerBlock(blockTomato, "tomatoes");
     	GameRegistry.registerBlock(blockBlueberry, "blueberries");
-    	GameRegistry.registerBlock(blockStove, "stove");
-    	GameRegistry.registerBlock(blockStoveLit, "stove_lit");
-    	GameRegistry.registerBlock(blockPantry, "pantry");
    	
     	// register items
     	GameRegistry.registerItem(tomato, "tomato");
     	GameRegistry.registerItem(blueberry, "blueberry");
     	
     	// register tileentities
-    	GameRegistry.registerTileEntity(TileEntityStove.class, "stove_tile_entity");
-    	GameRegistry.registerTileEntity(TileEntityPantry.class, "pantry_tile_entity");
 
     }
 
