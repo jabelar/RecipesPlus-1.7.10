@@ -91,19 +91,7 @@ public class RecipeBlockCrops extends BlockBush implements IGrowable
 	@SideOnly(Side.CLIENT)
     public IIcon getIcon(int parSide, int parGrowthStage)
     {
-        if (parGrowthStage < 7)
-        {
-            if (parGrowthStage == 6)
-            {
-                parGrowthStage = 5;
-            }
-
-            return iIcon[parGrowthStage >> 1];
-        }
-        else
-        {
-            return iIcon[3];
-        }
+    	return iIcon[parGrowthStage];
     }
    
     /*
