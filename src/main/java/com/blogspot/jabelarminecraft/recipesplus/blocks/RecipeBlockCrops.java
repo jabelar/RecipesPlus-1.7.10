@@ -38,13 +38,13 @@ public class RecipeBlockCrops extends BlockBush implements IGrowable
     public RecipeBlockCrops()
     {
     	// Basic block setup
-        this.setTickRandomly(true);
+        setTickRandomly(true);
         float f = 0.5F;
-        this.setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, 0.25F, 0.5F + f);
-        this.setCreativeTab((CreativeTabs)null);
-        this.setHardness(0.0F);
-        this.setStepSound(soundTypeGrass);
-        this.disableStats();
+        setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, 0.25F, 0.5F + f);
+        setCreativeTab((CreativeTabs)null);
+        setHardness(0.0F);
+        setStepSound(soundTypeGrass);
+        disableStats();
 
     }
 
@@ -126,6 +126,6 @@ public class RecipeBlockCrops extends BlockBush implements IGrowable
     @Override
 	public void func_149853_b(World parWorld, Random parRand, int parX, int parY, int parZ)
     {
-        this.incrementGrowStage(parWorld, parX, parY, parZ);
+        incrementGrowStage(parWorld, parX, parY, parZ);
     }
 }
