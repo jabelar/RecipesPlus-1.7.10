@@ -56,7 +56,8 @@ public class RecipePlus
     
     @EventHandler
     // preInit "Run before anything else. Read your config, create blocks, items, etc, and register them with the GameRegistry."
-    public void preInit(FMLPreInitializationEvent event) {
+    public void preInit(FMLPreInitializationEvent event) 
+    {
     	
         // DEBUG
         System.out.println("preInit()");
@@ -75,7 +76,8 @@ public class RecipePlus
 
     @EventHandler
     // load "Do your mod setup. Build whatever data structures you care about. Register recipes."
-    public void load(FMLInitializationEvent event) {
+    public void load(FMLInitializationEvent event) 
+    {
     	
         // DEBUG
         System.out.println("load()");
@@ -87,7 +89,8 @@ public class RecipePlus
 
     @EventHandler
     // postInit "Handle interaction with other mods, complete your setup based on this."
-    public void postInit(FMLPostInitializationEvent event) {
+    public void postInit(FMLPostInitializationEvent event) 
+    {
         // DEBUG
         System.out.println("postInit()");
         
