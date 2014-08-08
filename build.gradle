@@ -22,8 +22,13 @@ group= "com.blogspot.jabelarminecraft.wildanimals" // http://maven.apache.org/gu
 archivesBaseName = "Recipes+"
 
 minecraft {
+<<<<<<< HEAD
     version = "1.7.10-10.13.0.1190"
     assetDir = "../run/assets"
+=======
+    version = "1.7.10-10.13.0.1191"
+    runDir = "../run/assets"
+>>>>>>> 67a12fe1938da0317adb937e9ee0962c7d5b6c57
 }
 
 dependencies {
