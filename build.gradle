@@ -18,17 +18,12 @@ buildscript {
 apply plugin: 'forge'
 
 version = "1.7.10-0.0.1"
-group= "com.blogspot.jabelarminecraft.wildanimals" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group= "com.blogspot.jabelarminecraft.recipesplus" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "Recipes+"
 
 minecraft {
-<<<<<<< HEAD
-    version = "1.7.10-10.13.0.1190"
+    version = "1.7.10-10.13.0.1199"
     assetDir = "../run/assets"
-=======
-    version = "1.7.10-10.13.0.1191"
-    runDir = "../run/assets"
->>>>>>> 67a12fe1938da0317adb937e9ee0962c7d5b6c57
 }
 
 dependencies {
