@@ -22,7 +22,7 @@ group= "com.blogspot.jabelarminecraft.recipesplus" // http://maven.apache.org/gu
 archivesBaseName = "Recipes+"
 
 minecraft {
-    version = "1.7.10-10.13.1.1222"
+    version = "1.7.10-10.13.1.1225"
     assetDir = "../run/assets"
 }
 
