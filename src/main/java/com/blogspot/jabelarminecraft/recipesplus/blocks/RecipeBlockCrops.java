@@ -56,10 +56,28 @@ public class RecipeBlockCrops extends BlockBush implements IGrowable
     {
         return parBlock == Blocks.farmland;
     }
-
-    public void incrementGrowStage(World parWorld, int parX, int parY, int parZ)
+    
+    /**
+     * Ticks the block if it's been scheduled
+     */
+    @Override
+	public void updateTick(World parWorld, int parX, int parY, int parZ, Random parRand)
     {
-        int growStage = parWorld.getBlockMetadata(parX, parY, parZ) + MathHelper.getRandomIntegerInRange(parWorld.rand, 2, 5);
+    	super.updateTick(parWorld, parX, parY, parZ, parRand);
+        int growStage = parWorld.getBlockMetadata(parX, parY, parZ) + 1;
+
+        if (growStage > 7)
+        {
+        	growStage = 7;
+        }
+
+        parWorld.setBlockMetadataWithNotify(parX, parY, parZ, growStage, 2);
+    }
+
+
+    public void incrementGrowStage(World parWorld, Random parRand, int parX, int parY, int parZ)
+    {
+        int growStage = parWorld.getBlockMetadata(parX, parY, parZ) + MathHelper.getRandomIntegerInRange(parRand, 2, 5);
 
         if (growStage > 7)
         {
@@ -126,6 +144,6 @@ public class RecipeBlockCrops extends BlockBush implements IGrowable
     @Override
 	public void func_149853_b(World parWorld, Random parRand, int parX, int parY, int parZ)
     {
-        incrementGrowStage(parWorld, parX, parY, parZ);
+        incrementGrowStage(parWorld, parRand, parX, parY, parZ);
     }
 }

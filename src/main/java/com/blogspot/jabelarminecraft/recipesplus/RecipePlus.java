@@ -19,7 +19,6 @@ package com.blogspot.jabelarminecraft.recipesplus;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraft.world.WorldType;
 import net.minecraftforge.common.MinecraftForge;
 
 import com.blogspot.jabelarminecraft.recipesplus.blocks.BlockBlueberry;
@@ -27,7 +26,6 @@ import com.blogspot.jabelarminecraft.recipesplus.blocks.BlockTomato;
 import com.blogspot.jabelarminecraft.recipesplus.gui.RecipeCreativeTab;
 import com.blogspot.jabelarminecraft.recipesplus.items.ItemBlueberry;
 import com.blogspot.jabelarminecraft.recipesplus.items.ItemTomato;
-import com.blogspot.jabelarminecraft.recipesplus.worldgen.WorldTypeRecipePlus;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -95,6 +93,6 @@ public class RecipePlus
         System.out.println("postInit()");
         
         // register world types
-        WorldType RECIPE_PLUS = new WorldTypeRecipePlus(3, "worldTypeRecipePlus");
+        // WorldType RECIPE_PLUS = new WorldTypeRecipePlus(3, "worldTypeRecipePlus");
     }
 }
