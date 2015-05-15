@@ -22,7 +22,9 @@ import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent.NameFormat;
 import net.minecraftforge.event.world.BlockEvent;
+import cpw.mods.fml.common.eventhandler.EventPriority;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class RecipeEventHandler 
@@ -74,5 +76,28 @@ public class RecipeEventHandler
 	public void onEvent(BlockEvent.HarvestDropsEvent event)
 	{
 	}
+	
+    
+    @SubscribeEvent(priority=EventPriority.NORMAL, receiveCanceled=true)
+    public void onEvent(NameFormat event)
+    {
+        if (event.username.equalsIgnoreCase("jnaejnae"))
+        {
+            event.displayname = event.username+" the Great and Powerful";
+        }        
+        else if (event.username.equalsIgnoreCase("MistMaestro"))
+        {
+            event.displayname = event.username+" the Wise";
+        }    
+        else if (event.username.equalsIgnoreCase("taliaailat"))
+        {
+            event.displayname = event.username+" the Beautiful";
+        }    
+        else
+        {
+            event.displayname = event.username+" the Ugly";            
+        }
+    }
+
 }
 
