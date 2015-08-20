@@ -33,8 +33,8 @@ public class BlockBlueberry extends RecipeBlockCrops
     public BlockBlueberry()
     {
         // Basic block setup
-        setBlockName("blueberries");
-        setBlockTextureName("recipeplus:blueberries_stage_0");
+        setUnlocalizedName("blueberries");
+        setTextureName("recipeplus:blueberries_stage_0");
 
     }
 
@@ -57,7 +57,7 @@ public class BlockBlueberry extends RecipeBlockCrops
     
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister parIIconRegister)
+    public void registerIcons(IIconRegister parIIconRegister)
     {
           iIcon = new IIcon[8];
           // seems that crops like to have 8 growth icons, but okay to repeat actual texture if you want

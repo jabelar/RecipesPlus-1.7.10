@@ -122,7 +122,7 @@ public class RecipeBlockCrops extends BlockBush implements IGrowable
      */
     @Override
     // checks if finished growing (a grow stage of 7 is final stage)
-	public boolean func_149851_a(World parWorld, int parX, int parY, int parZ, boolean p_149851_5_)
+	public boolean canFertilize(World parWorld, int parX, int parY, int parZ, boolean p_149851_5_)
     {
         return parWorld.getBlockMetadata(parX, parY, parZ) != 7;
     }
@@ -132,7 +132,7 @@ public class RecipeBlockCrops extends BlockBush implements IGrowable
      * @see net.minecraft.block.IGrowable#func_149852_a(net.minecraft.world.World, java.util.Random, int, int, int)
      */
     @Override
-	public boolean func_149852_a(World p_149852_1_, Random parRand, int p_149852_3_, int p_149852_4_, int p_149852_5_)
+	public boolean shouldFertilize(World p_149852_1_, Random parRand, int p_149852_3_, int p_149852_4_, int p_149852_5_)
     {
         return true;
     }
@@ -142,7 +142,7 @@ public class RecipeBlockCrops extends BlockBush implements IGrowable
      * @see net.minecraft.block.IGrowable#func_149853_b(net.minecraft.world.World, java.util.Random, int, int, int)
      */
     @Override
-	public void func_149853_b(World parWorld, Random parRand, int parX, int parY, int parZ)
+	public void fertilize(World parWorld, Random parRand, int parX, int parY, int parZ)
     {
         incrementGrowStage(parWorld, parRand, parX, parY, parZ);
     }

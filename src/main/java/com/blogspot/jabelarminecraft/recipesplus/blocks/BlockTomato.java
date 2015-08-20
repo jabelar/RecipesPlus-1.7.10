@@ -36,8 +36,8 @@ public class BlockTomato extends RecipeBlockCrops
     public BlockTomato()
     {
     	// Basic block setup
-        setBlockName("tomatoes");
-        setBlockTextureName("recipeplus:tomatoes_stage_0");
+        setUnlocalizedName("tomatoes");
+        setTextureName("recipeplus:tomatoes_stage_0");
 
     }
 
@@ -90,7 +90,7 @@ public class BlockTomato extends RecipeBlockCrops
 
     @Override
     @SideOnly(Side.CLIENT)
-    public void registerBlockIcons(IIconRegister parIIconRegister)
+    public void registerIcons(IIconRegister parIIconRegister)
     {
     	// DEBUG
     	System.out.println("Block Tomato registerBlockIcons()");
