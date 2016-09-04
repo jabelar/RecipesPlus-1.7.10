@@ -16,25 +16,26 @@
 
 package com.blogspot.jabelarminecraft.recipesplus;
 
-import net.minecraft.block.Block;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
-import net.minecraftforge.common.MinecraftForge;
-
 import com.blogspot.jabelarminecraft.recipesplus.blocks.BlockBlueberry;
 import com.blogspot.jabelarminecraft.recipesplus.blocks.BlockTomato;
 import com.blogspot.jabelarminecraft.recipesplus.gui.RecipeCreativeTab;
 import com.blogspot.jabelarminecraft.recipesplus.items.ItemBlueberry;
 import com.blogspot.jabelarminecraft.recipesplus.items.ItemTomato;
-
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
+import net.minecraftforge.common.MinecraftForge;
 
-@Mod(modid = RecipePlus.MODID, name = RecipePlus.MODNAME, version = RecipePlus.VERSION)
+@Mod( modid = RecipePlus.MODID, 
+      name = RecipePlus.MODNAME, 
+      version = RecipePlus.VERSION,
+      acceptedMinecraftVersions = "[1.7.10]")
 public class RecipePlus
 {
     public static final String MODID = "recipeplus";
